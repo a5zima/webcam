@@ -3,16 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hand Landmark Detection</title>
+    <title>Finger Gymnastics</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils"></script>
 </head>
 <body>
-    <div class="container">
-        <video id="webcam" autoplay playsinline></video>
-        <canvas id="output"></canvas>
+    <div class="game-container">
+        <h1>Finger Gymnastics</h1>
+        <div class="video-container">
+            <div class="container">
+                <video id="webcam" autoplay playsinline></video>
+                <canvas id="output"></canvas>
+            </div>
+            <div id="bingo">BINGO!</div>
+        </div>
+        <p class="credits">made by Dany Shabashov with MediaPipe library!</p>
     </div>
+    
+    <!-- Load scripts in correct order -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils"></script>
     <script src="app.js"></script>
 </body>
 </html>
