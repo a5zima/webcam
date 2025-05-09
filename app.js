@@ -25,11 +25,17 @@ let colorPositions = [
 // Create score display
 const scoreDiv = document.createElement('div');
 scoreDiv.style.position = 'fixed';
-scoreDiv.style.bottom = '20px';
+scoreDiv.style.bottom = '70px'; // Increased distance from bottom
 scoreDiv.style.left = '50%';
-scoreDiv.style.transform = 'translateX(-50%)';  // Center horizontally
+scoreDiv.style.transform = 'translateX(-50%)';
 scoreDiv.style.color = 'white';
 scoreDiv.style.fontSize = '24px';
+scoreDiv.style.zIndex = '1000'; // Ensure score stays on top
+scoreDiv.style.padding = '5px 10px';
+scoreDiv.style.backgroundColor = 'rgba(0, 0, 0, 0.5)'; // Semi-transparent background
+scoreDiv.style.borderRadius = '5px';
+scoreDiv.style.maxWidth = '90%'; // Prevent overflow on small screens
+scoreDiv.style.textAlign = 'center';
 document.body.appendChild(scoreDiv);
 
 // Create audio context and success sound
