@@ -26,7 +26,8 @@ let colorPositions = [
 const scoreDiv = document.createElement('div');
 scoreDiv.style.position = 'fixed';
 scoreDiv.style.bottom = '20px';
-scoreDiv.style.right = '20px';
+scoreDiv.style.left = '50%';
+scoreDiv.style.transform = 'translateX(-50%)';  // Center horizontally
 scoreDiv.style.color = 'white';
 scoreDiv.style.fontSize = '24px';
 document.body.appendChild(scoreDiv);
@@ -117,6 +118,8 @@ hands.onResults(results => {
                 canScore = false;
                 playSuccessSound();
                 showBingo();
+                // Add quick shuffle after 2 seconds
+                setTimeout(shuffleColors, 2000);
             }
             
             // Update score display
@@ -189,7 +192,8 @@ async function initializeWebcam() {
             video: {
                 width: WIDTH,
                 height: HEIGHT
-            }
+            },
+            audio: false
         });
         
         // Set video source and wait for it to be ready
