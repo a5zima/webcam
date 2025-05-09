@@ -1,0 +1,15 @@
+{
+  "name": "mediapipe-hand-demo",
+  "version": "1.0.0",
+  "description": "A simple demo using MediaPipe hand tracking with vanilla JS.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "live-server src"
+  },
+  "dependencies": {
+    "@mediapipe/hands": "^0.3.162",
+    "live-server": "^1.2.1"
+  },
+  "author": "",
+  "license": "ISC"
+}
