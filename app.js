@@ -23,20 +23,29 @@ let colorPositions = [
 ];
 
 // Create score display
+// ...existing code...
+
+// Create score display
+// Create score display
 const scoreDiv = document.createElement('div');
-scoreDiv.style.position = 'fixed';
-scoreDiv.style.bottom = '70px'; // Increased distance from bottom
+scoreDiv.style.position = 'absolute';  // Changed from 'fixed' to 'absolute'
+scoreDiv.style.bottom = '60px';        // Position from bottom instead of using top
 scoreDiv.style.left = '50%';
-scoreDiv.style.transform = 'translateX(-50%)';
+scoreDiv.style.transform = 'translateX(-50%)';  // Only transform X axis
 scoreDiv.style.color = 'white';
-scoreDiv.style.fontSize = '24px';
-scoreDiv.style.zIndex = '1000'; // Ensure score stays on top
-scoreDiv.style.padding = '5px 10px';
-scoreDiv.style.backgroundColor = 'rgba(0, 0, 0, 0.5)'; // Semi-transparent background
-scoreDiv.style.borderRadius = '5px';
-scoreDiv.style.maxWidth = '90%'; // Prevent overflow on small screens
+scoreDiv.style.fontSize = '28px';
+scoreDiv.style.fontWeight = 'bold';
+scoreDiv.style.zIndex = '1000';
+scoreDiv.style.padding = '10px 20px';
+scoreDiv.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+scoreDiv.style.borderRadius = '10px';
+scoreDiv.style.maxWidth = '200px';
 scoreDiv.style.textAlign = 'center';
-document.body.appendChild(scoreDiv);
+scoreDiv.style.fontFamily = 'Arial, sans-serif';
+scoreDiv.style.pointerEvents = 'none';  // Make sure it doesn't interfere with interactions
+document.querySelector('.video-container').appendChild(scoreDiv);  // Append to video container instead of body
+
+// ...existing code...
 
 // Create audio context and success sound
 const audioContext = new (window.AudioContext || window.webkitAudioContext)();
