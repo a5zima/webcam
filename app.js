@@ -121,7 +121,7 @@ hands.onResults(results => {
                 // Add quick shuffle after 2 seconds
                 setTimeout(shuffleColors, 2000);
             }
-            
+            //LULO
             // Update score display
             scoreDiv.textContent = `Score: ${score}`;
         });
